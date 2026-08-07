@@ -10,7 +10,11 @@ name: Nimbus Build
 # components, icon gaps, Sätteri quirks, etc.). Keep this OUT of the repo's
 # required status checks until the cutover PR (Epic G1).
 on:
-  pull_request:  workflow_dispatch:
+  
+  pull_request:
+  workflow_dispatch:
+
+
 
     branches:
       - production
