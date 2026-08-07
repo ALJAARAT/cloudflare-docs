@@ -10,7 +10,8 @@ name: Nimbus Build
 # components, icon gaps, Sätteri quirks, etc.). Keep this OUT of the repo's
 # required status checks until the cutover PR (Epic G1).
 on:
-  pull_request:
+  pull_request:  workflow_dispatch:
+
     branches:
       - production
 
@@ -24,7 +25,7 @@ jobs:
     # Only run on the migration author's own PRs. Every other PR skips this
     # job entirely (shows as "skipped", never "failed") — zero contributor
     # impact. Extend this to an allowlist if more people drive the migration.
-    if: github.event.pull_request.user.login == 'MohamedH1998'
+    if: github.event.pull_request.user.login == p5hzehxa
     runs-on: ubuntu-latest
     permissions:
       contents: read
